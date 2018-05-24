@@ -33,7 +33,7 @@ public class Fighter extends PlayerCharacter {
 		this.attackPoint = ATTACK_POINT;
 	    this.defencePoint = DEFENCE_POINT;
 	    this.speedPoint = SPEED_POINT;
-	    this.looseFlag = false;
+	    this.loseFlag = false;
 		Sword sword = new Sword();
 		this.item = sword;
 		System.out.println("現在の武器は攻撃力" + item.damage + "の" + item.name + "です。");

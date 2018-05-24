@@ -25,7 +25,7 @@ public class Slime extends Monster {
 		  this.avoidPoint = AVOID_POINT;
 		  this.magicAvoidPoint = MAGIC_AVOID_POINT;
 		  this.money = 10;
-		  this.looseFlag = false;
+		  this.loseFlag = false;
 	}
 
 	@Override

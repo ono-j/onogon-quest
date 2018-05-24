@@ -127,14 +127,14 @@ public abstract class PlayerCharacter extends Character {
 			try {
 				for(int i =0; i < monsterList.size(); i ++){
 					Monster monster = monsterList.get(i);
-					if(!monster.looseFlag){
+					if(!monster.loseFlag){
 						System.out.print(i + 1 + ". " + monster.name + "  ");
 					}
 				}
 				System.out.println("");
 				command = Integer.parseInt(new java.util.Scanner(System.in).nextLine());
 				if (command <= monsterList.size()){
-					if(!monsterList.get(command - 1).looseFlag){
+					if(!monsterList.get(command - 1).loseFlag){
 						return monsterList.get(command - 1);
 					}
 				}
@@ -148,7 +148,7 @@ public abstract class PlayerCharacter extends Character {
 	} else {
 		for (int i = 0; i < monsterList.size(); i++){
 			Monster monster = monsterList.get(i);
-			if(!monster.looseFlag){
+			if(!monster.loseFlag){
 				return monster;
 			}
 		}
@@ -177,7 +177,7 @@ public abstract class PlayerCharacter extends Character {
 
   public void attack(Monster m) {
 	    System.out.println(this.name + "の攻撃！");
-	    if (!m.looseFlag){
+	    if (!m.loseFlag){
 	    	Random random = new Random();
 	    	if (random.nextInt(64) > m.avoidPoint) {
 	    		int attackDamage = 0;
@@ -244,7 +244,7 @@ public abstract class PlayerCharacter extends Character {
   public void run() {
     System.out.println("逃げ出した！");
 	System.out.println("");
-    this.looseFlag = true;
+    this.loseFlag = true;
   }
 
   public void sleep() {
@@ -257,7 +257,7 @@ public abstract class PlayerCharacter extends Character {
   public void die() {
     System.out.println(this.name + "は死んでしまった。");
 	System.out.println("");
-    this.looseFlag = true;
+    this.loseFlag = true;
   }
 
 

@@ -19,7 +19,7 @@ public class Main {
 		// 2. 行動を選択
 		int command;
 		boolean gameFinished = false;
-		while(!gameFinished && !hero.looseFlag){
+		while(!gameFinished && !hero.loseFlag){
 			try {
 				System.out.println("コマンドを入力してください。");
 				System.out.println("1.街へ入る  2.モンスターとたたかう  3.ゲーム終了");

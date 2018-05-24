@@ -52,7 +52,7 @@ public class Hero extends PlayerCharacter {
 	    this.defencePoint = DEFENCE_POINT;
 	    this.speedPoint = SPEED_POINT;
 	    this.magicList.add(new Sizz());
-	    this.looseFlag = false;
+	    this.loseFlag = false;
 		Sword sword = new Sword();
 		this.item = sword;
 		System.out.println("現在の武器は攻撃力" + item.damage + "の" + item.name + "です。");

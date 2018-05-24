@@ -74,7 +74,7 @@ public abstract class Monster extends Character {
   public void run() {
     System.out.println(this.name + "は逃げ出した！");
 	System.out.println("");
-    this.looseFlag = true;
+    this.loseFlag = true;
     lostNumber++;
   }
 
@@ -85,7 +85,7 @@ public abstract class Monster extends Character {
 
   public void die(PlayerCharacter pc) {
     System.out.println(this.name + "を倒した！");
-    this.looseFlag = true;
+    this.loseFlag = true;
     pc.setMoney(pc.getMoney() + this.money);
  	System.out.println(pc.name + " は " + this.money + "ゴールドひろった ");
 	System.out.println("");

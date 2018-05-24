@@ -9,7 +9,7 @@ public abstract class Character {
 	protected int attackPoint;
 	protected int defencePoint;
 	protected int speedPoint;
-	public boolean looseFlag = false;
+	public boolean loseFlag = false;
 
 	public void setHp(int hp) {
 		 this.hp = hp;
@@ -44,11 +44,11 @@ public abstract class Character {
 	}
 
 	public void setLooseFlag(boolean looseFlag) {
-		this.looseFlag = looseFlag;
+		this.loseFlag = looseFlag;
 	}
 
 	public boolean getLooseFlag() {
-		return this.looseFlag;
+		return this.loseFlag;
 	}
 
 	public abstract void run();
