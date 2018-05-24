@@ -60,27 +60,23 @@ public abstract class Monster extends Character {
 		  int pcHp = pc.getHp() - attackDamage;
 	      pc.setHp(pcHp);
 	      System.out.println(attackDamage + "ポイントのダメージを受けた！");
-	      System.out.println("");
 	      if (pc.getHp() < 1) {
 	        pc.die();
 	      }
 	    } else {
 	      System.out.println(pc.name + "は、うまくかわした！");
-		  System.out.println("");
 	    }
 	  }
 
   @Override
   public void run() {
     System.out.println(this.name + "は逃げ出した！");
-	System.out.println("");
     this.loseFlag = true;
     lostNumber++;
   }
 
   public void sleep() {
     System.out.println(this.name + "は、眠って回復した！");
-	System.out.println("");
   }
 
   public void die(PlayerCharacter pc) {
@@ -88,7 +84,6 @@ public abstract class Monster extends Character {
     this.loseFlag = true;
     pc.setMoney(pc.getMoney() + this.money);
  	System.out.println(pc.name + " は " + this.money + "ゴールドひろった ");
-	System.out.println("");
     lostNumber++;
   }
 

@@ -119,7 +119,7 @@ public abstract class PlayerCharacter extends Character {
   }
 
   public Monster selectMonster(List<Monster> monsterList) {
-	if(monsterList.size() - Monster.lostNumber > 2){
+	if(monsterList.size() - Monster.lostNumber > 1){
 		System.out.println("どのモンスターに攻撃しますか？");
 		int command;
 		boolean commandRegistered = false;
@@ -213,17 +213,14 @@ public abstract class PlayerCharacter extends Character {
 	    		monsterHp -= attackDamage;
 	    		m.setHp(monsterHp);
 	    		System.out.println(attackDamage + "ポイントのダメージを与えた！");
-	    		System.out.println("");
 	    		if (monsterHp < 1) {
 	    			m.die(this);
 	    		}
 	    	} else {
 	    		System.out.println("避けられた！");
-	    		System.out.println("");
 	    	}
 	    } else {
     			System.out.println("しかし失敗した！");
-    			System.out.println("");
 	    }
   }
 
@@ -235,7 +232,6 @@ public abstract class PlayerCharacter extends Character {
 			magic.cast(this, m);
 		} else {
 			System.out.print("しかしMPが足りない！");
-			System.out.println("");
 		}
 	}
   }
@@ -243,20 +239,17 @@ public abstract class PlayerCharacter extends Character {
   @Override
   public void run() {
     System.out.println("逃げ出した！");
-	System.out.println("");
     this.loseFlag = true;
   }
 
   public void sleep() {
     System.out.println(name + "は、眠って回復した！");
-	System.out.println("");
   }
 
 
 
   public void die() {
     System.out.println(this.name + "は死んでしまった。");
-	System.out.println("");
     this.loseFlag = true;
   }
 
