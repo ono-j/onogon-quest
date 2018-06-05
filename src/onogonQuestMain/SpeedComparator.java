@@ -9,5 +9,4 @@ public class SpeedComparator implements Comparator<characters.Character>{
 		return o1.getSpeedPoint() < o2.getSpeedPoint() ? 1 : -1;
 	}
 
-
 }

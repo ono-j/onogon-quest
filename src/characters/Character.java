@@ -11,8 +11,16 @@ public abstract class Character {
 	protected int speedPoint;
 	public boolean loseFlag = false;
 
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void setHp(int hp) {
-		 this.hp = hp;
+		this.hp = hp;
 	}
 
 	public int getHp() {

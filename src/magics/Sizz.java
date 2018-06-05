@@ -18,17 +18,17 @@ public class Sizz extends Magic{
 
 	@Override
 	public void cast(PlayerCharacter pc, Monster m) {
-    	Random random = new Random();
-    	if(random.nextInt(16) > m.magicAvoidPoint){
-    		// ダメージ = 5 + (1 ～ 7)
-    		this.effectValue = EFFECT_VALUE + random.nextInt(7) + 1;
+		Random random = new Random();
+		if(random.nextInt(16) > m.magicAvoidPoint){
+			// ダメージ = 5 + (1 ～ 7)
+			this.effectValue = EFFECT_VALUE + random.nextInt(7) + 1;
 
-    		System.out.print(this.effectValue + "ポイントのダメージを与えた！");
-    		System.out.println("");
-    		int monsterHp = m.getHp();
-    		monsterHp -= this.effectValue;
-    		m.setHp(monsterHp);
-    		if (monsterHp < 1) {
+			System.out.print(this.effectValue + "ポイントのダメージを与えた！");
+			System.out.println("");
+			int monsterHp = m.getHp();
+			monsterHp -= this.effectValue;
+			m.setHp(monsterHp);
+			if (monsterHp < 1) {
 				m.die(pc);
 			}
 		} else {
